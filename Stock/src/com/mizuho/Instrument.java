@@ -78,6 +78,18 @@ public class Instrument implements Comparable<Instrument>{
 	public Set<PriceInfo> getPrices() {
 		return prices;
 	}
+	
+	/**
+	 * Add the Price Info for the Instrument
+	 * 
+	 * @param info
+	 * @return boolean
+	 */
+	
+	public boolean addPrice(PriceInfo info){
+		
+		return prices.add(info);
+	}
 
 	/**
 	 * Compares instrument based on the instrument Id

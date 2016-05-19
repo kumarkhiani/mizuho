@@ -36,12 +36,6 @@ public class PriceInfo implements Comparable<PriceInfo> {
 	private Double price = null;
 
 	/**
-	 * Constant used to specify the Expiry Date when the price should be
-	 * considered as expired
-	 */
-	public static final int EXPIRY_DAYS = 30;
-
-	/**
 	 * Constructor
 	 * 
 	 * @param vendor

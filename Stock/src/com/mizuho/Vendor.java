@@ -89,6 +89,18 @@ public class Vendor implements Comparable<Vendor> {
 	}
 	
 	/**
+	 * Add the Price Info for the Vendor
+	 * 
+	 * @param info
+	 * @return boolean
+	 */
+	
+	public boolean addPrice(PriceInfo info){
+		
+		return prices.add(info);
+	}
+	
+	/**
 	 * Compares vendor based on the vendor Id
 	 */
 

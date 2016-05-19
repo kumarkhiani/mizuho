@@ -65,8 +65,6 @@ public class MizuhoTest {
 			}
 		}
 		
-		System.out.println(inputData);
-
 		service = new InMemoryPriceInfoService();
 		Vendor v = null;
 		Instrument i = null;
@@ -117,7 +115,6 @@ public class MizuhoTest {
 		
 		int expectedPrices = instruments.values().size() * (Utility.EXPIRY_DAYS + EXTRA_PRICES);
 		assertEquals(expectedPrices, service.getPriceByVendor(vendors.get("A")).size());
-		System.out.println(service.getPriceByVendor(vendors.get("A")).size());
 	}
 	
 	@Test
@@ -138,10 +135,8 @@ public class MizuhoTest {
 			assertTrue(containsExpiredObject(i.getPrices()));
 		}
 		
-		System.out.println(service.getPriceByVendor(vendors.get("A")));
 		service.purgeExpiredObjects(vendors.values(), instruments.values());
-		System.out.println(service.getPriceByVendor(vendors.get("A")));
-		System.out.println(Utility.getExpiryDate());
+		
 		for(Vendor v : vendors.values()){
 			assertFalse(containsExpiredObject(v.getPrices()));
 		}
