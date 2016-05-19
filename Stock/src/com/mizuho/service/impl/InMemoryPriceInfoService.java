@@ -40,7 +40,7 @@ public class InMemoryPriceInfoService implements PriceInfoService {
 		
 		PriceInfo info = new PriceInfo(vendor, instrument, price, date);
 
-		return vendor.getPrices().add(info) && instrument.getPrices().add(info);
+		return vendor.addPrice(info) && instrument.addPrice(info);
 		
 	}
 
